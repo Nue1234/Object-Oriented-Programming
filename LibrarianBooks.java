@@ -5,7 +5,7 @@ public class LibrarianBooks {
 
 	JFrame Booksframe;
 	private JTextField BookNumberTF;
-	private int[] bookList = {1, 4, 3, 3};
+	private int[] bookList = {1, 1, 2};
 	/**
 	 * Launch the application.
 	 */
@@ -44,32 +44,32 @@ public class LibrarianBooks {
 		AvailBooks.setBounds(228, 10, 369, 76);
 		Booksframe.getContentPane().add(AvailBooks);
 		
-		JLabel Book1 = new JLabel("0: The Hunger Games");
+		JLabel Book1 = new JLabel("0: Solo Leveling");
 		Book1.setHorizontalAlignment(SwingConstants.CENTER);
 		Book1.setBounds(46, 168, 232, 56);
 		Booksframe.getContentPane().add(Book1);
 		
-		JLabel Book2 = new JLabel("1: The Fault in Our Stars");
+		JLabel Book2 = new JLabel("1: The Beginning After the End ");
 		Book2.setHorizontalAlignment(SwingConstants.CENTER);
 		Book2.setBounds(46, 223, 232, 56);
 		Booksframe.getContentPane().add(Book2);
 		
-		JLabel Book3 = new JLabel("2: The Shining");
+		JLabel Book3 = new JLabel("2: WIND BREAKER");
 		Book3.setHorizontalAlignment(SwingConstants.CENTER);
 		Book3.setBounds(46, 289, 232, 56);
 		Booksframe.getContentPane().add(Book3);
 
-		JLabel Author1 = new JLabel("Suzanne Collins");
+		JLabel Author1 = new JLabel("Chugong");
 		Author1.setHorizontalAlignment(SwingConstants.CENTER);
 		Author1.setBounds(297, 168, 232, 56);
 		Booksframe.getContentPane().add(Author1);
 		
-		JLabel Author2 = new JLabel("John Green");
+		JLabel Author2 = new JLabel("TurtleMe");
 		Author2.setHorizontalAlignment(SwingConstants.CENTER);
 		Author2.setBounds(297, 223, 232, 56);
 		Booksframe.getContentPane().add(Author2);
 		
-		JLabel Author3 = new JLabel("Stephen King");
+		JLabel Author3 = new JLabel("Jo Yongseuk");
 		Author3.setHorizontalAlignment(SwingConstants.CENTER);
 		Author3.setBounds(297, 289, 232, 56);
 		Booksframe.getContentPane().add(Author3);
@@ -79,12 +79,12 @@ public class LibrarianBooks {
 		RemainingCopy1.setBounds(558, 168, 232, 56);
 		Booksframe.getContentPane().add(RemainingCopy1);
 		
-		JLabel RemainingCopy2 = new JLabel("4");
+		JLabel RemainingCopy2 = new JLabel("1");
 		RemainingCopy2.setHorizontalAlignment(SwingConstants.CENTER);
 		RemainingCopy2.setBounds(558, 223, 232, 56);
 		Booksframe.getContentPane().add(RemainingCopy2);
 		
-		JLabel RemainingCopy3 = new JLabel("3");
+		JLabel RemainingCopy3 = new JLabel("2");
 		RemainingCopy3.setHorizontalAlignment(SwingConstants.CENTER);
 		RemainingCopy3.setBounds(558, 289, 232, 56);
 		Booksframe.getContentPane().add(RemainingCopy3);
@@ -99,7 +99,7 @@ public class LibrarianBooks {
 		AuthorsLabel.setBounds(288, 102, 232, 56);
 		Booksframe.getContentPane().add(AuthorsLabel);
 		
-		JLabel NumOfCopiesLabel= new JLabel("NUM. OF COPIES :");
+		JLabel NumOfCopiesLabel= new JLabel("COPIES REMAINING :");
 		NumOfCopiesLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		NumOfCopiesLabel.setBounds(539, 102, 232, 56);
 		Booksframe.getContentPane().add(NumOfCopiesLabel);
