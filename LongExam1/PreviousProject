@@ -1,0 +1,92 @@
+import java.awt.Color;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JTextPane;
+import javax.swing.JButton;
+
+public class PreviousProject extends JFrame implements ActionListener {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					PreviousProject frame = new PreviousProject();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public PreviousProject() {
+		setBackground(new Color(240, 240, 240));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 750, 500);
+		contentPane = new JPanel();
+		contentPane.setBackground(Color.DARK_GRAY);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel PreviousProjectstxt = new JLabel("Previous Projects");
+		PreviousProjectstxt.setForeground(new Color(255, 51, 255));
+		PreviousProjectstxt.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 25));
+		PreviousProjectstxt.setBackground(Color.WHITE);
+		PreviousProjectstxt.setBounds(286, 30, 162, 38);
+		contentPane.add(PreviousProjectstxt);
+		
+		JTextPane PreviousProjectstxtlbl = new JTextPane();
+		PreviousProjectstxtlbl.setText("Vintata: Performed Digital Ink Painting\r\nFritzi: Performed Digital Ink Painting\r\nKlaus: Performed Clean-up In-between\r\nPhineas and Ferb Candace Against The Universe:\r\nPerformed Digital Ink Painting\r\nLooney Tunes: Performed Digital Ink Painting\r\nScooby Doo: Performed Digital Ink Painting\r\nAnimaniacs: Performed Digital Ink Painting\r\nDuck Tales: Performed Digital Ink Painting\r\nGreen Eggs and Ham: Performed Digital Ink Painting\r\nBig Hero 6: Performed Digital Ink Painting\r");
+		PreviousProjectstxtlbl.setForeground(new Color(102, 204, 255));
+		PreviousProjectstxtlbl.setFont(new Font("Times New Roman", Font.PLAIN, 17));
+		PreviousProjectstxtlbl.setEditable(false);
+		PreviousProjectstxtlbl.setBackground(new Color(0, 0, 51));
+		PreviousProjectstxtlbl.setBounds(200, 95, 348, 268);
+		contentPane.add(PreviousProjectstxtlbl);
+		
+		JButton BackToHomeBtn = new JButton("Back");
+		BackToHomeBtn.addActionListener(this);
+		BackToHomeBtn.setForeground(new Color(102, 204, 255));
+		BackToHomeBtn.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		BackToHomeBtn.setBackground(new Color(204, 0, 255));
+		BackToHomeBtn.setBounds(30, 401, 115, 30);
+		contentPane.add(BackToHomeBtn);
+		
+		JLabel BGlbl = new JLabel("");
+		BGlbl.setIcon(new ImageIcon("C:\\Users\\chiji\\Downloads\\desktop-wallpaper-circuit-board-technology-background-purple-and-blue-light-banner-electronic-system-concept-7523400-vector-art-at-vecteezy.jpg"));
+		BGlbl.setBounds(-83, 0, 885, 496);
+		contentPane.add(BGlbl);
+		
+	}
+	@Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() instanceof JButton) {
+            JButton sourceButton = (JButton) e.getSource();
+
+            if (sourceButton.getText().equals("Back")) {
+                HomeGUI homeGUI = new HomeGUI();
+                homeGUI.setVisible(true);
+                dispose(); // Close the current frame
+            }
+        }
+    }
+}
