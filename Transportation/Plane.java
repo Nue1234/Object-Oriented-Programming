@@ -11,6 +11,6 @@ class Plane extends Vehicle {
     }
 
     public double getWingspan() { 
-        return wingspan; // This line returns the value of the tireType variable when the getTireType() method is called.
+        return wingspan; // This line returns the value of the wingspan variable when the getWingspan() method is called.
     }
 }
