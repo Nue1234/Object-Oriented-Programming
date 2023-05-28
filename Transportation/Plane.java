@@ -10,7 +10,7 @@ class Plane extends Vehicle {
         System.out.println("The plane is flying."); 
     }
 
-    public double getWingspan() {
+    public double getWingspan() { // This returns the value of the Wingspan variable.
         return wingspan;
     }
 }
