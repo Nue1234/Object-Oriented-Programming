@@ -10,7 +10,7 @@ class Car extends Vehicle {
         System.out.println("The car is being driven.");
     }
 
-    public String getTireType() { // This returns the value of the tireType variable.
+    public String getTireType() {
         return tireType; // This line returns the value of the tireType variable when the getTireType() method is called.
     }
 }
