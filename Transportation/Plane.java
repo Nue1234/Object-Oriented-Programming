@@ -6,8 +6,8 @@ class Plane extends Vehicle {
         this.wingspan = wingspan;
     }
 
-    public void fly() {
-        System.out.println("The plane is flying.");
+    public void fly() { // This is a method named fly responsible for printing the message telling that the plane is flying.
+        System.out.println("The plane is flying."); 
     }
 
     public double getWingspan() {
