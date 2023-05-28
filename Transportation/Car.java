@@ -6,11 +6,11 @@ class Car extends Vehicle {
         this.tireType = tireType;
     }
 
-    public void drive() { // This line declares a public method named drive(), which is specific to the Car class. It is responsible for printing a message indicating that the car is being driven.
+    public void drive() { // This is a method named drive responsible for printing the message drive telling that the car is being driven.
         System.out.println("The car is being driven.");
     }
 
-    public String getTireType() { // This line declares a public method named getTireType(), which returns the value of the tireType variable.
+    public String getTireType() { // This returns the value of the tireType variable.
         return tireType; // This line returns the value of the tireType variable when the getTireType() method is called.
     }
 }
