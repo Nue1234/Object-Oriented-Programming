@@ -1,0 +1,7 @@
+Damage Reports:
+Equipment: Flat/Slotted Screwdriver - Cause: Bent
+Equipment: Gloves - Cause: burned
+
+Loss Reports:
+Equipment: Gloves - Date Last Used: January/01/2023
+Equipment: Gloves - Date Last Used: June/10/2023
