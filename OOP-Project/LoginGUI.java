@@ -9,6 +9,8 @@ public class LoginGUI extends JFrame {
     private JPanel contentPane;
     private JTextField UserNameField;
     private JPasswordField PassWordField;
+    private JLabel Usernamelbl;
+    private JLabel Passwordlbl;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -30,7 +32,7 @@ public class LoginGUI extends JFrame {
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
-
+        
         
         // Attributes of the Username box
         UserNameField = new JTextField();
@@ -44,42 +46,71 @@ public class LoginGUI extends JFrame {
         
         // Attributes of the Password box
         PassWordField = new JPasswordField();
+        PassWordField.setForeground(Color.WHITE);
         PassWordField.setBackground(new Color(13, 13, 47));
         PassWordField.setBounds(752, 311, 431, 37);
         contentPane.add(PassWordField);
 
-
-        // Attributes of the Register button
-        JButton RegisterBtn = new JButton("");
         
-        // Add action listener to LoginNowBtn
-        RegisterBtn.addActionListener(new ActionListener() {
-        	public void actionPerformed(ActionEvent e) {
-        		
-        	}
-        });
-        RegisterBtn.setSelected(true);
-        RegisterBtn.setContentAreaFilled(false);
-        RegisterBtn.setBorderPainted(false);
-        RegisterBtn.setBounds(769, 545, 399, 49);
-        contentPane.add(RegisterBtn);
+     // Attributes of the Register button
+        JButton Registerbtn = new JButton("REGISTER");
+        Registerbtn.setForeground(new Color(0, 0, 0));
+        Registerbtn.setFont(new Font("Tw Cen MT", Font.BOLD, 26));
+        Registerbtn.setBackground(new Color(30, 144, 255));
+        Registerbtn.setSelected(true);
+        Registerbtn.setBounds(769, 545, 399, 49);
+        contentPane.add(Registerbtn);
 
-        // Attributes of the background label
-        JLabel BGlbl = new JLabel("");
-        BGlbl.setIcon(new ImageIcon("C:\\Users\\Jeck\\Downloads\\1.PNG"));
-        BGlbl.setBounds(0, 0, 1280, 761);
-        contentPane.add(BGlbl);
+        // Add action listener to LoginNowBtn
+        Registerbtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose(); // Close the LoginGUI
+
+                // Open the RegisterGUI
+                EventQueue.invokeLater(new Runnable() {
+                    public void run() {
+                        try {
+                            RegisterGUI frame = new RegisterGUI();
+                            frame.setVisible(true);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+        });
+
+        
         
         // Attributes of the Login button
-        JButton LoginNowBtn = new JButton("");
-        LoginNowBtn.setSelected(true);
-        LoginNowBtn.setContentAreaFilled(false);
-        LoginNowBtn.setBorderPainted(false);
-        LoginNowBtn.setBounds(769, 463, 399, 49);
-        contentPane.add(LoginNowBtn);
+        JButton Loginbtn = new JButton("LOGIN");
+        Loginbtn.setForeground(Color.BLACK);
+        Loginbtn.setBackground(new Color(30, 144, 255));
+        Loginbtn.setFont(new Font("Tw Cen MT", Font.BOLD, 26));
+        Loginbtn.setSelected(true);
+        Loginbtn.setBounds(769, 463, 399, 49);
+        contentPane.add(Loginbtn);
+        
+        Usernamelbl = new JLabel("User Name");
+        Usernamelbl.setForeground(Color.WHITE);
+        Usernamelbl.setFont(new Font("Tw Cen MT", Font.PLAIN, 20));
+        Usernamelbl.setBounds(752, 191, 109, 23);
+        contentPane.add(Usernamelbl);
+        
+        Passwordlbl = new JLabel("Password");
+        Passwordlbl.setForeground(Color.WHITE);
+        Passwordlbl.setFont(new Font("Tw Cen MT", Font.PLAIN, 20));
+        Passwordlbl.setBounds(752, 285, 109, 23);
+        contentPane.add(Passwordlbl);
+        
+        // Attributes of the background label
+        JLabel BGlbl = new JLabel("");
+        BGlbl.setIcon(new ImageIcon("C:\\Users\\Jeck\\Documents\\Programming\\login.PNG"));
+        BGlbl.setBounds(0, 0, 1280, 761);
+        contentPane.add(BGlbl);
 
         // Add action listener to LoginNowBtn
-        LoginNowBtn.addActionListener(new ActionListener() {
+        Loginbtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String username = UserNameField.getText();
                 String password = new String(PassWordField.getPassword());
